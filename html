@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/Felix.Elele/Desktop/secure/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Animation</title>
+    <style>
+        .moving-box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 225, 255);
+            position: absolute;
+            animation: move 4s infinite;
+        }
 
+        @keyframes move {
+            0% { top: 0; left: 0; }
+            25% { top: 0; left: calc(100% - 100px); } /* Move right */
+            50% { top: calc(100% - 100px); left: calc(100% - 100px); } /* Move down */
+            75% { top: calc(100% - 100px); left: 0; } /* Move left */
+            100% { top: 0; left: 0; } /* Move up */
+        }
+
+        body {
+            margin: 0;
+            height: 90vh;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-box"></div>
+</body>
+</html>
